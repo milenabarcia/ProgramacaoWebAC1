@@ -1,0 +1,59 @@
+<div class="container mt-5">
+  <h2>Apólice de Seguro Automobilístico</h2>
+  <form (ngSubmit)="calcularApolice()" #apoliceForm="ngForm">
+    <div class="mb-3">
+      <label for="nome" class="form-label">Nome do Segurado:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nome"
+        [(ngModel)]="nome"
+        name="nome"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="sexo" class="form-label">Sexo:</label>
+      <select
+        class="form-select"
+        id="sexo"
+        [(ngModel)]="sexo"
+        name="sexo"
+        required
+      >
+        <option value="" disabled selected>Selecione</option>
+        <option value="masculino">Masculino</option>
+        <option value="feminino">Feminino</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="idade" class="form-label">Idade:</label>
+      <input
+        type="number"
+        class="form-control"
+        id="idade"
+        [(ngModel)]="idade"
+        name="idade"
+        required
+        min="0"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="valorAutomovel" class="form-label">Valor do Automóvel (R$):</label>
+      <input
+        type="number"
+        class="form-control"
+        id="valorAutomovel"
+        [(ngModel)]="valorAutomovel"
+        name="valorAutomovel"
+        required
+        min="0"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary">Calcular Apólice</button>
+  </form>
+  <div>
+    <h4>Resultado:</h4>
+    <p>O valor da apólice é: <strong>R$ {{ valorApolice }}</strong></p>
+  </div>
+</div>

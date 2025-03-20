@@ -1,0 +1,33 @@
+<div class="container mt-5">
+  <h2>Conversor de Temperatura</h2>
+  <div class="mb-3">
+    <label for="celsius" class="form-label">Temperatura em Celsius:</label>
+    <input
+      type="number"
+      class="form-control"
+      id="celsius"
+      [(ngModel)]="celsius"
+    />
+  </div>
+  <button class="btn btn-primary mb-3" (click)="converter()">Converter</button>
+  <div class="mb-3">
+    <label for="fahrenheit" class="form-label">Fahrenheit:</label>
+    <input
+      type="text"
+      class="form-control"
+      id="fahrenheit"
+      [value]="fahrenheit"
+      readonly
+    />
+  </div>
+  <div>
+    <label for="kelvin" class="form-label">Kelvin:</label>
+    <input
+      type="text"
+      class="form-control"
+      id="kelvin"
+      [value]="kelvin"
+      readonly
+    />
+  </div>
+</div>
